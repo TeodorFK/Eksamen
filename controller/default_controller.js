@@ -1,6 +1,10 @@
-const index = (req, res) => {
+const Pet = require('../model/pet_model');
+
+const index = async (req, res) => {
   try {
-    res.render('index');
+    const Pets = await Pet.find();
+
+    res.render('index', { Pets });
   } catch (err) {
     console.log(err);
     res.status(500).send('Internal Server Error');

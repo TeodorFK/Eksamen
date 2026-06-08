@@ -1,7 +1,16 @@
 <%- include('./partials/head.ejs') %>
 <%- include('./partials/header.ejs') %>
 
-<h1>Teodor Guid's Side</h1>
+<main>
+  <section>
+    <% Pets.forEach(pet=>{%>
+      <h1><%=pet.name  %></h1>
+      <h2>Owner: <%= pet.owner %></h2>
+        <h3>Vet:<%= pet.vet %></h3>
+        <p>Species: <%= pet.species %></p>
+  <%  }) %>
+  </section>
+</main>
 
 </body>
 </html>

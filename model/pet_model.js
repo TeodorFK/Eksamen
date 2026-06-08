@@ -19,6 +19,17 @@ const petSchema = new Schema({
   },
 });
 
+petSchema.statics.createPet = async (info) => {
+  const newPet = new Pet({
+    name: info.pet,
+    species: info.species,
+    owner: info.owner,
+    vet: info.vet,
+  });
+  await newPet.save();
+  return;
+};
+
 const Pet = model('pet', petSchema);
 
 module.exports = Pet;

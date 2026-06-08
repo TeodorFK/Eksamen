@@ -1,0 +1,29 @@
+<%- include('./partials/head.ejs') %>
+<%- include('./partials/header.ejs') %>
+
+<main>
+    <form action="/profile" method="POST">
+      <section>
+      <label for="owner">Owner</label>
+      <input type="text" id="owner" name="owner" placeholder="Enter the owner's name..">
+      <label for="phone">Phone number</label>
+      <input type="number" id="phone" name="phone" placeholder="Enter the owner's phone number..">
+  </section>
+  <section >
+    <label for="pet">Pet's name</label>
+    <input type="text" name="pet" id="pet" placeholder="Enter you'r pet's name..">
+    <label for="species">Species</label>
+    <input type="text" name="species" id="species" placeholder="Enter the pet's species">
+    <label for="vet">Vet</label>
+    <select name="vet" id="vet">
+      <% users.forEach(user=>{%>
+        <option value="<%= user.username %>"><%= user.username %></option>
+     <% }) %>
+    </select>
+    <button>Submit</button>
+  </section>
+    </form>
+</main>
+
+</body>
+</html>

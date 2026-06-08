@@ -16,10 +16,10 @@ async function seed() {
     const Users = await User.create([
       { username: 'bamse', password: 'test123' },
       { username: 'computer', password: 'test123' },
-      { username: 'maria', password: 'test123' },
+      { username: 'sensor', password: 'test123' },
       { username: 'seal', password: 'test123' },
-      { username: 'lanez', password: 'test123' },
-      { username: 'rocket', password: 'test123' },
+      { username: 'Geir', password: 'test123' },
+      { username: 'extra', password: 'test123' },
     ]);
     console.log('Brukere opprettet');
 

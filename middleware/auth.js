@@ -1,26 +1,20 @@
 const jwt = require('jsonwebtoken');
 
 const authenticate = (req, res, next) => {
-  const token = req.cookie.jwt;
-  try {
-    if (!token) {
-      return res.redirect('/');
-    }
-
-    jwt.verify(token, process.env.SECRET_KEY, (err, decodedToken) => {
-      if (err) {
-        console.log(err.message);
-        res.redirect('/login');
-      } else {
-        req.auth = decodedToken;
-        console.log('decoded', decodedToken);
-        next();
-      }
-    });
-  } catch (err) {
-    console.log(err);
-    res.redirect('/login');
+  const token = req.cookies?.jwt;
+  if (!token) {
+    console.log(token);
+    return res.redirect('/');
+  } else {
   }
+  jwt.verify(token, process.env.SECRET_KEY, (err) => {
+    if (err) {
+      console.log(err.message);
+      res.redirect('/login');
+    } else {
+      next();
+    }
+  });
 };
 
 module.exports = authenticate;
