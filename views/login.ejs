@@ -1,0 +1,20 @@
+<%- include('./partials/head.ejs') %>
+<link rel="stylesheet" href="auth.css">
+<%- include('./partials/header.ejs') %>
+
+
+<div class="form">
+  <section class="auth-form">
+  <form action="/login" method="POST">
+  <label for="username" id="username">Username</label>
+  <input type="text" name="username">
+  <label for="password" id="password">Password</label>
+  <input type="password" name="password">
+
+  <button type="submit">Submit</button>
+</form>
+  </section>
+</div>
+
+</body>
+</html>
