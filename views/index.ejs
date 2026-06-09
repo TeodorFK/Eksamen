@@ -8,6 +8,10 @@
       <h2>Owner: <%= pet.owner %></h2>
         <h3>Vet:<%= pet.vet %></h3>
         <p>Species: <%= pet.species %></p>
+        <a href="/update/<%= pet._id %>">Update</a>
+        <form action="/delete/<%= pet._id  %>" method="POST">
+          <button type="submit">Delete</button>
+        </form>
   <%  }) %>
   </section>
 </main>

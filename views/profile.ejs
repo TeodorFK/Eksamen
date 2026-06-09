@@ -1,15 +1,16 @@
 <%- include('./partials/head.ejs') %>
+<link rel="stylesheet" href="/css/profile.css">
 <%- include('./partials/header.ejs') %>
 
 <main>
     <form action="/profile" method="POST">
-      <section>
+      <section class="box">
       <label for="owner">Owner</label>
       <input type="text" id="owner" name="owner" placeholder="Enter the owner's name..">
       <label for="phone">Phone number</label>
       <input type="number" id="phone" name="phone" placeholder="Enter the owner's phone number..">
   </section>
-  <section >
+  <section class="box">
     <label for="pet">Pet's name</label>
     <input type="text" name="pet" id="pet" placeholder="Enter you'r pet's name..">
     <label for="species">Species</label>
@@ -20,7 +21,7 @@
         <option value="<%= user.username %>"><%= user.username %></option>
      <% }) %>
     </select>
-    <button>Submit</button>
+    <button type="submit">Submit</button>
   </section>
     </form>
 </main>

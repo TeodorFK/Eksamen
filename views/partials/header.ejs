@@ -1,10 +1,15 @@
 </head>
 <header>
   <nav>
-    <a href="/">Homepage</a>
+    <a href="/"><img src="/img/67p-logo.png" alt=""></a>
     <section class="nav-right">
-      <a href="/login">Login</a>
+      <% if(user){ %>
+        <a href="/profile">profile</a>
+      <%}else{  %>
+        <a href="/login">Login</a>
+        <% } %>
     </section>
   </nav>
+  <hr>
 </header>
 <body>
