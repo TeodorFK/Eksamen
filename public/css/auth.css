@@ -20,7 +20,11 @@ form {
   align-items: center;
   justify-content: center;
   gap: 1vh;
-  background-color: #c0c0c0;
+  background-image: linear-gradient(
+    to bottom right,
+    var(--second-color),
+    var(--main-color)
+  );
   padding: 3vw;
   border-radius: 2vw;
 }
@@ -37,7 +41,14 @@ button {
   border-style: none;
   border-radius: 1vw;
   padding: 1vh;
+  transition: 0.2s;
 }
 button:hover {
   cursor: pointer;
+  background-color: #afffd7;
+}
+
+:root {
+  --main-color: #0e9050;
+  --second-color: #3dc47d;
 }
