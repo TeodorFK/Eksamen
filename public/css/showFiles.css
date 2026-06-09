@@ -18,14 +18,15 @@ main {
     var(--main-color)
   );
   padding: 2vw;
-  width: 70vw;
+  width: fit-content;
   gap: 1vh;
   box-shadow: 2px 4px 8px rgb(160, 160, 160);
 }
 #file img {
   border-radius: 2vw;
-  width: 80vw;
+  width: auto;
   max-width: 100%;
+  max-height: 50vh;
   height: auto;
 }
 :root {
