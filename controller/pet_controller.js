@@ -7,7 +7,7 @@ const petAndOwner = async (req, res) => {
     await Pet.createPet(req.body);
     await Owner.createOwner(req.body);
 
-    res.redirect('/profile');
+    res.redirect('/');
   } catch (err) {
     console.log(err);
     res.send("Couldn't create Pet and Owner, because of error's");

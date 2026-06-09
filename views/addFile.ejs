@@ -1,0 +1,17 @@
+<%- include('./partials/head.ejs') %>
+<link rel="stylesheet" href="/css/createFiles.css">
+<%- include('./partials/header.ejs') %>
+
+
+<main>
+  <section>
+    <form action="/createFile" method="post" enctype="multipart/form-data">
+      <label for="">File</label>
+      <input type="file" name="file">
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+</main>
+  
+</body>
+</html>

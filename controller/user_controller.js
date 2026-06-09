@@ -30,7 +30,7 @@ const login_post = async (req, res) => {
     const token = createToken(foundUser._id);
 
     res.cookie('jwt', token, { httpOnly: true, maxAge: 1000 * 1000 });
-    res.redirect('/');
+    res.redirect('/profile');
   } catch (err) {
     console.log(err);
     res.status(400).json({ err });
@@ -48,7 +48,6 @@ const profile = async (req, res) => {
     console.log(err);
   }
 };
-
 
 module.exports = {
   login_get,

@@ -1,0 +1,14 @@
+<%- include('./partials/head.ejs') %>
+<link rel="stylesheet" href="/css/showFiles.css">
+<%- include('./partials/header.ejs') %>
+
+
+<main>
+  <section id="file">
+    <% allFiles.forEach(file=>{%>
+      <img src="/files/<%= file %>">
+    <% }) %>
+  </section>
+</main>
+</body>
+</html>

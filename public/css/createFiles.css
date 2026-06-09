@@ -1,0 +1,62 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2vw;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 2vh;
+  background-image: linear-gradient(
+    to bottom right,
+    var(--second-color),
+    var(--main-color)
+  );
+  padding: 2vw;
+  width: 40vw;
+  max-width: 480px;
+  gap: 1vh;
+  box-shadow: 2px 4px 8px rgb(160, 160, 160);
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  padding: 2vh;
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-top: 2vh;
+  width: 100%;
+  font-size: large;
+}
+
+input[type='file'] {
+  width: 100%;
+  padding: 2vh;
+  border: none;
+  border-radius: 2vh;
+  box-sizing: border-box;
+}
+button {
+  margin-top: 1vh;
+  padding: 1vw;
+  border-radius: 2vh;
+  border: none;
+  transition: 0.3s;
+}
+button:hover {
+  cursor: pointer;
+  background-color: rgb(178, 233, 162);
+}
+
+:root {
+  --main-color: #0e9050;
+  --second-color: #3dc47d;
+}
