@@ -3,7 +3,6 @@ const jwt = require('jsonwebtoken');
 const authenticate = (req, res, next) => {
   const token = req.cookies?.jwt;
   if (!token) {
-    console.log(token);
     return res.redirect('/login');
   } else {
   }
