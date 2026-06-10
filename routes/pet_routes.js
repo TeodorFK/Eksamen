@@ -7,8 +7,8 @@ router.post('/profile', controller.petAndOwner);
 router.get(`/update/:pet`, controller.update_get);
 router.post(`/update/:pet`, controller.update_post);
 
-router.post('/update/:pet', controller.remove);
+router.post('/update/:pet', controller.remove_pet);
 
-router.post('/delete/:pet', controller.remove);
+router.post('/delete/:pet', controller.remove_pet);
 
 module.exports = router;

@@ -6,7 +6,7 @@ main {
   padding: 2vw;
   margin-top: 1vh;
 }
-#pet-info {
+.info {
   margin: 2vw;
   display: flex;
   flex-direction: column;
@@ -32,11 +32,6 @@ h3 {
   font-weight: 500;
 }
 .button {
-  display: flex;
-  flex-direction: row;
-  gap: 1vw;
-}
-#buttons {
   display: flex;
   flex-direction: row;
   gap: 1vw;

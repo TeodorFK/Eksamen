@@ -43,9 +43,10 @@ const update_post = async (req, res) => {
   }
 };
 
-const remove = async (req, res) => {
+const remove_pet = async (req, res) => {
   try {
     await Pet.findByIdAndDelete(req.params.pet);
+
     res.redirect('/');
   } catch (err) {
     console.log(err);
@@ -56,5 +57,5 @@ module.exports = {
   petAndOwner,
   update_get,
   update_post,
-  remove,
+  remove_pet,
 };

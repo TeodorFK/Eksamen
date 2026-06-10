@@ -3,11 +3,11 @@ const { Schema, model } = require('mongoose');
 const petSchema = new Schema({
   name: {
     type: String,
-    required: [true, "Pet name is required"],
+    required: [true, 'Pet name is required'],
   },
   species: {
     type: String,
-    required: [true, "species is required"],
+    required: [true, 'species is required'],
   },
   owner: {
     type: String,
