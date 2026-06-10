@@ -2,6 +2,8 @@ const router = require('express').Router();
 
 const controller = require('../controller/pet_controller');
 
+router.get('/pets',controller.pet_get)
+
 router.post('/profile', controller.petAndOwner);
 
 router.get(`/update/:pet`, controller.update_get);

@@ -1,0 +1,22 @@
+<%- include('./partials/head.ejs') %>
+<link rel="stylesheet" href="/css/index.css">
+<%- include('./partials/header.ejs') %>
+
+<main>
+
+  <% Owners.forEach(owner=>{ %>
+  <section class="info">
+    <h1>Name: <%=owner.name  %></h1>
+  <h2>Phone number: <%=owner.phone  %></h2>
+  <h3>Pet: <%= owner.pet %></h3>
+  <section class="buttons">
+        <form action="/delete/<%= owner._id  %>" method="POST">
+          <button type="submit">Delete</button>
+        </form>
+        </section>
+  </section>
+  <% }) %>
+</main>
+
+</body>
+</html>

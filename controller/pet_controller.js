@@ -2,6 +2,13 @@ const { User } = require('../model/user_model');
 const Pet = require('../model/pet_model');
 const Owner = require('../model/owner_model');
 
+const pet_get = async (req, res) => {
+  try {
+    const Pets = await Pet.find();
+    res.render('pets', { Pets });
+  } catch (err) {}
+};
+
 const petAndOwner = async (req, res) => {
   try {
     await Pet.createPet(req.body);
@@ -54,6 +61,7 @@ const remove_pet = async (req, res) => {
 };
 
 module.exports = {
+  pet_get,
   petAndOwner,
   update_get,
   update_post,

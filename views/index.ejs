@@ -3,34 +3,10 @@
 <%- include('./partials/header.ejs') %>
 
 <main>
-
-    <% Pets.forEach(pet=>{%>
-      <section class="info">
-      <h1><%=pet.name  %></h1>
-      <h2>Owner: <%= pet.owner  %></h2>
-        <h3>Vet:<%= pet.vet %></h3>
-        <p>Species: <%= pet.species %></p>
-        <section class="buttons">
-          <a href="/update/<%= pet._id %>">Update</a>
-        <form action="/delete/<%= pet._id  %>" method="POST">
-          <button type="submit">Delete</button>
-        </form>
-        </section>
-        </section>
-  <%  }) %>
-
-  <% Owners.forEach(owner=>{ %>
-  <section class="info">
-    <h1>Name: <%=owner.name  %></h1>
-  <h2>Phone number: <%=owner.phone  %></h2>
-  <h3>Pet: <%= owner.pet %></h3>
-  <section class="buttons">
-        <form action="/delete/<%= owner._id  %>" method="POST">
-          <button type="submit">Delete</button>
-        </form>
-        </section>
+  <section>
+    <a href="/pets">Pets</a>
+      <a href="/owners">Owners</a>
   </section>
-  <% }) %>
 </main>
 
 </body>
