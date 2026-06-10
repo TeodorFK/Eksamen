@@ -1,8 +1,9 @@
 const router = require('express').Router();
 
 const controller = require('../controller/pet_controller');
+const Authenticate = require('../middleware/auth');
 
-router.get('/pets',controller.pet_get)
+router.get('/pets', Authenticate, controller.pet_get);
 
 router.post('/profile', controller.petAndOwner);
 

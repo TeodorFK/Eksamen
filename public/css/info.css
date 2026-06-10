@@ -1,0 +1,72 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2vw;
+  margin-top: 1vh;
+}
+.info {
+  margin: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2vh;
+  background-image: linear-gradient(
+    to bottom right,
+    var(--second-color),
+    var(--main-color)
+  );
+  padding: 2vw;
+  width: 20vw;
+  gap: 1vh;
+  box-shadow: 2px 4px 8px rgb(160, 160, 160);
+}
+h1 {
+  font-weight: 600;
+}
+h2 {
+  font-weight: 500;
+}
+h3 {
+  font-weight: 500;
+}
+.button {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+}
+button {
+  width: 5vw;
+  padding: 1vw;
+  border-radius: 1vw;
+  border: none;
+  transition: 0.2s;
+  background-color: white;
+  font-family: Arial;
+}
+button:hover {
+  cursor: pointer;
+  background-color: rgb(221, 15, 15);
+}
+#buttons a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  width: 4vw;
+  padding: 0.5vw;
+  border-radius: 1vw;
+  border: none;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+}
+#buttons a:hover {
+  cursor: pointer;
+  background-color: rgb(155, 207, 142);
+}
+:root {
+  --main-color: #0e9050;
+  --second-color: #3dc47d;
+}
